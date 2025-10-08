@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Viewport設定を追加してレスポンシブデザインを有効化 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>女性専科 さくら整体</title>
+    <!-- Tailwind CSS CDNを読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <LINK REL="SHORTCUT ICON" HREF="img/icon.ico">
+    <style>
+        /* HTML要素のスクロールをスムーズにする */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* カスタムスタイル: さくら整体のイメージカラー */
+        .sakura-text {
+            color: #e85b8a; /* 元のHTMLで使用されていたピンク色 */
+        }
+        .sakura-bg-light {
+            background-color: #fce7f3; /* 薄いピンクの背景 */
+        }
+        /* ボディに背景画像を設定 */
+        .body-with-background {
+            background-image: url('img/Image_fx (9).jpg'); /* ユーザーがアップロードした画像を使用 */
+            background-repeat: no-repeat; /* 画像を繰り返さない */
+            background-size: cover; /* 画面全体を覆うように調整 */
+            background-position: center center; /* 画像を中央に配置 */
+            background-attachment: fixed; /* 背景画像を固定 */
+            background-color: #f0f0f0; /* 画像がない部分のフォールバックカラー */
+        }
+        .price th {
+            @apply bg-pink-100 p-3 text-pink-700 font-semibold border-b-2 border-pink-300 text-lg;
+        }
+        .price td {
+            @apply p-3 bg-white text-gray-800 border-b border-gray-200 text-lg;
+        }
+        /* 固定幅を削除し、コンテンツを中央に配置するための調整 */
+        .old-image-style {
+            /* 以前のimg/title.pngなどのインラインスタイルを調整 */
+            margin: 1.5rem auto 2rem auto;
+            max-width: 840px; /* PC表示での最大幅を設定 */
+        }
+        /* ページトップボタンの固定表示 */
+        #page-top {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 50;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="body-with-background pt-20"> <!-- 固定ヘッダー分の余白を追加 -->
+
+<a id="top"></a>
+
+<!-- 固定ヘッダー -->
+<header class="fixed top-0 left-0 w-full bg-white/95 shadow-md z-50">
+    <div class="max-w-4xl mx-auto p-3 flex justify-between items-center">
+        <span class="text-base md:text-lg font-bold sakura-text">女性専科 さくら整体</span>
+        <div class="flex items-center space-x-2 md:space-x-4">
+            <!-- PC表示用の電話番号 -->
+            <div class="hidden md:flex flex-col text-right text-xs font-bold">
+                <a href="tel:0120-327-444" class="flex items-center justify-end text-gray-700 hover:text-pink-500 font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                    <span>0120-327-444 (フリーダイヤル)</span>
+                </a>
+                <a href="tel:0228-24-8166" class="flex items-center justify-end text-gray-700 hover:text-pink-500 font-normal">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 invisible" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                    <span>0228-24-8166</span>
+                </a>
+            </div>
+            <!-- スマホ表示用の電話アイコン -->
+            <a href="tel:0120-327-444" class="md:hidden hover:opacity-80 transition duration-300">
+                <img src="img/telephone.png" alt="電話" class="h-8">
+            </a>
+            <a href="#book" class="hover:opacity-80 transition duration-300">
+                <img src="img/book.png" alt="予約する" class="h-9 md:h-10">
+            </a>
+            <a href="#access" class="hover:opacity-80 transition duration-300">
+                <img src="img/map.png" alt="地図" class="h-8 md:h-9">
+            </a>
+        </div>
+    </div>
+</header>
+
+<div class="max-w-4xl mx-auto p-4 md:p-8 bg-white/90 shadow-2xl rounded-lg">
+
+    <!-- タイトル画像 -->
+    <img src="img/titleonly.png" alt="女性専科 さくら整体" class="w-full h-auto old-image-style">
+    
+    <!-- メニュー -->
+    <ul id="menu" class="flex flex-col md:flex-row justify-center space-y-3 md:space-y-0 md:space-x-6 list-none p-0 mb-10">
+        <li>
+            <a href="#price" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
+                メニュー・通常料金のご案内
+            </a>
+        </li>
+        <li>
+            <a href="#access" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
+                アクセス
+            </a>
+        </li>
+        <li>
+            <a href="#book" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
+                ご予約フォーム
+            </a>
+        </li>
+    </ul>
+    
+   
+    
+    <!-- メニュー・通常料金のご案内 -->
+    <a id="price" class="relative -top-20 block"></a> <!-- アンカー位置調整 -->
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">メニュー・通常料金のご案内</h1>
+
+    
+    <!-- もみほぐし（ボディケア） -->
+    <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
+        <h2 class="text-xl font-bold mb-2 text-pink-700">もみほぐし（ボディケア）</h2>
+        <p class="text-gray-600 mb-4 text-sm md:text-base"><span class="sakura-text font-bold">肩こり、首こり、頭痛、五十肩、腰痛、冷え性、不眠、全身疲労</span>　など</p>
+        <div class="overflow-x-auto">
+            <table class="price w-full border-collapse rounded-lg overflow-hidden">
+                <thead>
+                    <tr>
+                        <th class="p-3">40分</th>
+                        <th class="p-3">60分</th>
+                        <th class="p-3">70分</th>
+                        <th class="p-3">90分</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="p-3">3,200円</td>
+                        <td class="p-3">4,800円</td>
+                        <td class="p-3">5,600円</td>
+                        <td class="p-3">7,200円</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- オイルトリートメント（足湯含） -->
+    <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
+        <h2 class="text-xl font-bold mb-2 text-pink-700">オイルトリートメント（足湯含）</h2>
+        <p class="text-gray-600 mb-4 text-sm md:text-base"><span class="sakura-text font-bold">むくみ、疲れ、脳〜内臓の活性化、健康維持に</span></p>
+        <div class="overflow-x-auto">
+            <table class="price w-full border-collapse rounded-lg overflow-hidden max-w-sm mx-auto">
+                <thead>
+                    <tr>
+                        <th class="p-3">60分</th>
+                        <th class="p-3">70分</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="p-3">6,000円</td>
+                        <td class="p-3">7,000円</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- リフレクソロジー（足底反射区）＋脚部オイルトリートメント（足湯含） -->
+    <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
+        <h2 class="text-xl font-bold mb-2 text-pink-700">リフレクソロジー（足底反射区）＋脚部オイルトリートメント（足湯含）</h2>
+        <div class="overflow-x-auto">
+            <table class="price w-full border-collapse rounded-lg overflow-hidden max-w-xs mx-auto">
+                <thead>
+                    <tr>
+                        <th class="p-3">40分</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="p-3">3,600円</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- リフレクソロジー（足底反射区） -->
+    <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
+        <h2 class="text-xl font-bold mb-2 text-pink-700">リフレクソロジー（足底反射区）</h2>
+        <div class="overflow-x-auto">
+            <table class="price w-full border-collapse rounded-lg overflow-hidden max-w-xs mx-auto">
+                <thead>
+                    <tr>
+                        <th class="p-3">30分</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="p-3">2,700円</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="py-4"></div>
+
+    <!-- 3回券 -->
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">3回券</h1>
+
+    <!-- もみほぐし（ボディケア） 3回券 -->
+    <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
+        <h2 class="text-xl font-bold mb-2 text-pink-700">もみほぐし（ボディケア）</h2>
+        <div class="overflow-x-auto">
+            <table class="price w-full border-collapse rounded-lg overflow-hidden max-w-xs mx-auto">
+                <thead>
+                    <tr>
+                        <th class="p-3">70分×3回</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="p-3">
+                            <s class="text-gray-500 mr-2">16,800円</s> 
+                            <span class="text-red-500 font-bold">→ 14,700円</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- オイルトリートメント（足湯含） 3回券 -->
+    <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
+        <h2 class="text-xl font-bold mb-2 text-pink-700">オイルトリートメント（足湯含）</h2>
+        <div class="overflow-x-auto">
+            <table class="price w-full border-collapse rounded-lg overflow-hidden max-w-xs mx-auto">
+                <thead>
+                    <tr>
+                        <th class="p-3">70分×3回</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="p-3">
+                            <s class="text-gray-500 mr-2">21,000円</s> 
+                            <span class="text-red-500 font-bold">→ 18,900円</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="py-4"></div>
+
+    <!-- ご予約フォーム -->
+    <a id="book" class="relative -top-20 block"></a> <!-- アンカー位置調整 -->
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">ご予約フォーム</h1>
+    <p class="text-center text-xl font-bold mb-10 p-4 bg-pink-50 rounded-lg shadow-inner">
+        <a href="https://beauty.hotpepper.jp/kr/slnH000654790/" target="_blank" class="sakura-text hover:underline">
+            <b>ホットペッパービューティーで予約する</b>
+        </a>
+    </p>
+        
+    <div class="py-4"></div>
+
+    <!-- アクセス -->
+    <a id="access" class="relative -top-20 block"></a> <!-- アンカー位置調整 -->
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">アクセス</h1>
+
+    <!-- アクセス情報テーブルをリスト形式に変更 (レスポンシブ対応のため) -->
+    <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <dl class="divide-y divide-gray-100">
+            <div class="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-pink-700">店舗名</dt>
+                <dd class="mt-1 sm:col-span-2 sm:mt-0 text-gray-800">さくら整体</dd>
+            </div>
+            <div class="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-pink-700">住所</dt>
+                <dd class="mt-1 sm:col-span-2 sm:mt-0 text-gray-800">989-5501 宮城県栗原市若柳字川北十文字5-2</dd>
+            </div>
+            <div class="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-pink-700">電話</dt>
+                <dd class="mt-1 sm:col-span-2 sm:mt-0 text-gray-800 font-mono text-lg">
+                    <p>0228-24-8166</p>
+                    <p>0120-327-444 <span class="text-sm font-sans">(フリーダイヤル)</span></p>
+                </dd>
+            </div>
+            <div class="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-pink-700">営業時間</dt>
+                <dd class="mt-1 sm:col-span-2 sm:mt-0 text-gray-800">10:00 〜 19:30　不定休</dd>
+            </div>
+            <div class="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                <dt class="font-medium text-pink-700">当日予約のご連絡</dt>
+                <dd class="mt-1 sm:col-span-2 sm:mt-0 text-gray-800">8:00 〜 18:00</dd>
+            </div>
+        </dl>
+    </div>
+
+
+
+    <!-- Google Map iframe -->
+    <div class="w-full mb-12 aspect-video rounded-lg overflow-hidden shadow-xl">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1317.40293929013!2d141.13921962633106!3d38.76856480767077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f891fea841641af%3A0x81b899cc8d19a701!2z44GV44GP44KJ5pW05L2T!5e0!3m2!1sja!2sjp!4v1759026324532!5m2!1sja!2sjp" 
+            loading="lazy"
+            allowfullscreen="" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-full border-0">
+        </iframe>
+    </div>
+	
+    
+    <hr class="border-t-2 border-pink-300 my-8">
+
+    <!-- フッタータイトル画像 -->
+    <img src="img/titleonly.png" alt="女性専科 さくら整体" class="block mx-auto w-2/3 md:w-1/2 h-auto my-8">
+	
+    <!-- ページトップへ戻るボタン -->
+    <div id="page-top" class="hover:opacity-80 transition duration-300">
+        <a href="#top">
+            <img src="img/pagetop.png" alt="ページトップへ戻る" class="h-14 md:h-16">
+        </a>
+    </div>
+
+</div>
+
+
+</body>
+</html>
