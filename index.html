@@ -22,7 +22,7 @@
         }
         /* ボディに背景画像を設定 */
         .body-with-background {
-            background-image: url('img/Image_fx (9).jpg'); /* ユーザーがアップロードした画像を使用 */
+            background-image: url('img/background.jpg'); /* ユーザーがアップロードした画像を使用 */
             background-repeat: no-repeat; /* 画像を繰り返さない */
             background-size: cover; /* 画面全体を覆うように調整 */
             background-position: center center; /* 画像を中央に配置 */
@@ -91,6 +91,21 @@
     <!-- タイトル画像 -->
     <img src="img/titleonly.png" alt="女性専科 さくら整体" class="w-full h-auto old-image-style">
     
+    <!-- 施術イメージ画像 -->
+    <div class="my-8 grid grid-cols-2 gap-4">
+        <div>
+            <img src="img/body_1.jpg" alt="施術風景 全身" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div>
+            <img src="img/hand_1.jpg" alt="施術風景 手" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div>
+            <img src="img/leg_1.jpg" alt="施術風景 脚" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div>
+            <img src="img/oil_1.jpg" alt="施術風景 オイル" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+    </div>
     <!-- メニュー -->
     <ul id="menu" class="flex flex-col md:flex-row justify-center space-y-3 md:space-y-0 md:space-x-6 list-none p-0 mb-10">
         <li>
@@ -99,13 +114,13 @@
             </a>
         </li>
         <li>
-            <a href="#access" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
-                アクセス
+            <a href="#book" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
+                ご予約フォーム
             </a>
         </li>
         <li>
-            <a href="#book" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
-                ご予約フォーム
+            <a href="#access" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
+                アクセス
             </a>
         </li>
     </ul>
@@ -114,13 +129,14 @@
     
     <!-- メニュー・通常料金のご案内 -->
     <a id="price" class="relative -top-20 block"></a> <!-- アンカー位置調整 -->
-    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">メニュー・通常料金のご案内</h1>
+    
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 text-gray-900 border-b-2 border-pink-300 pb-2">メニュー・通常料金のご案内</h1>
 
     
     <!-- もみほぐし（ボディケア） -->
     <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
         <h2 class="text-xl font-bold mb-2 text-pink-700">もみほぐし（ボディケア）</h2>
-        <p class="text-gray-600 mb-4 text-sm md:text-base"><span class="sakura-text font-bold">肩こり、首こり、頭痛、五十肩、腰痛、冷え性、不眠、全身疲労</span>　など</p>
+        <p class="text-gray-600 mb-4 text-sm md:text-base"><span class="sakura-text font-bold">肩こり、首こり、頭痛、五十肩、腰痛、冷え性、不眠、全身疲労　など</span></p>
         <div class="overflow-x-auto">
             <table class="price w-full border-collapse rounded-lg overflow-hidden">
                 <thead>
@@ -206,7 +222,8 @@
     <div class="py-4"></div>
 
     <!-- 3回券 -->
-    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">3回券</h1>
+    
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 text-gray-900 border-b-2 border-pink-300 pb-2">3回券</h1>
 
     <!-- もみほぐし（ボディケア） 3回券 -->
     <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
@@ -256,18 +273,23 @@
 
     <!-- ご予約フォーム -->
     <a id="book" class="relative -top-20 block"></a> <!-- アンカー位置調整 -->
-    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">ご予約フォーム</h1>
-    <p class="text-center text-xl font-bold mb-10 p-4 bg-pink-50 rounded-lg shadow-inner">
-        <a href="https://beauty.hotpepper.jp/kr/slnH000654790/" target="_blank" class="text-blue-600 underline hover:text-blue-800 transition-colors duration-300">
-            <strong>ホットペッパービューティーで予約する</strong>
+    
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 text-gray-900 border-b-2 border-pink-300 pb-2">ご予約フォーム</h1>
+    <div class="mb-10 p-4 bg-pink-50 rounded-lg shadow-inner">
+        <a href="https://beauty.hotpepper.jp/kr/slnH000654790/" target="_blank" class="flex flex-col sm:flex-row items-center justify-center gap-4 group">
+            <strong class="text-xl text-blue-600 underline group-hover:text-blue-800 transition-colors duration-300 whitespace-nowrap">
+                ネット予約はこちら
+            </strong>
+            <img src="img/Beauty_Logo_270_90.gif" alt="ホットペッパービューティー ロゴ" class="h-12 sm:h-14">
         </a>
-    </p>
+    </div>
         
     <div class="py-4"></div>
 
     <!-- アクセス -->
     <a id="access" class="relative -top-20 block"></a> <!-- アンカー位置調整 -->
-    <h1 class="text-3xl font-bold text-center mt-12 mb-6 sakura-text border-b-2 border-pink-300 pb-2">アクセス</h1>
+    
+    <h1 class="text-3xl font-bold text-center mt-12 mb-6 text-gray-900 border-b-2 border-pink-300 pb-2">アクセス</h1>
 
     <!-- アクセス情報テーブルをリスト形式に変更 (レスポンシブ対応のため) -->
     <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
