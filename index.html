@@ -15,28 +15,21 @@
     <style>
         /* HTML要素のスクロールをスムーズにする */
         html {
+            height: 100%; /* 背景固定のガタつき防止 */
             scroll-behavior: smooth;
         }
         /* カスタムスタイル: さくら整体のイメージカラー */
         .sakura-text {
             color: #e85b8a; /* 元のHTMLで使用されていたピンク色 */
         }
-        .sakura-bg-light {
-            background-color: #fce7f3; /* 薄いピンクの背景 */
-        }
-        /* 背景画像用の擬似要素を作成 */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw; /* Viewport Width */
-            height: 100svh; /* Small Viewport Height */
-            z-index: -1;
+        body {
+            height: 100%; /* 背景固定のガタつき防止 */
+            overflow-y: scroll; /* 常にスクロールバーを表示し、ガタつきを防止 */
             background-image: url('img/background.jpg'); /* ユーザーがアップロードした画像を使用 */
             background-repeat: no-repeat; /* 画像を繰り返さない */
             background-size: cover; /* 画面全体を覆うように調整 */
             background-position: center center; /* 画像を中央に配置 */
+            background-attachment: fixed; /* 背景画像を固定 */
         }
 
         .price th {
