@@ -7,6 +7,10 @@
     <title>女性専科 さくら整体</title>
     <!-- Tailwind CSS CDNを読み込み -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Noto Serif JP) を読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icon.ico">
     <style>
         /* HTML要素のスクロールをスムーズにする */
@@ -49,6 +53,15 @@
             z-index: 50;
             cursor: pointer;
         }
+        /* 蛍光ペンスタイル */
+        .highlighter-yellow {
+            background: linear-gradient(transparent 60%, #fff799 60%);
+            padding: 0 0.1em;
+        }
+        /* 和風フォント */
+        .font-noto-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
     </style>
 </head>
 
@@ -62,18 +75,14 @@
         <span class="text-base md:text-lg font-bold sakura-text">女性専科 さくら整体</span>
         <div class="flex items-center space-x-2 md:space-x-4">
             <!-- PC表示用の電話番号 -->
-            <div class="hidden md:flex flex-col text-right text-xs font-bold">
-                <a href="tel:0120-327-444" class="flex items-center justify-end text-gray-700 hover:text-pink-500 font-bold">
+            <div class="hidden md:flex text-right font-bold">
+                <a href="tel:090-6683-0223" class="flex items-center justify-end text-gray-700 hover:text-pink-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
-                    <span>0120-327-444 (フリーダイヤル)</span>
-                </a>
-                <a href="tel:0228-24-8166" class="flex items-center justify-end text-gray-700 hover:text-pink-500 font-normal">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 invisible" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
-                    <span>0228-24-8166</span>
+                    <span>090-6683-0223</span>
                 </a>
             </div>
             <!-- スマホ表示用の電話アイコン -->
-            <a href="tel:0120-327-444" class="md:hidden hover:opacity-80 transition duration-300">
+            <a href="tel:090-6683-0223" class="md:hidden hover:opacity-80 transition duration-300">
                 <img src="img/telephone.png" alt="電話" class="h-8">
             </a>
             <a href="#book" class="hover:opacity-80 transition duration-300">
@@ -91,6 +100,11 @@
     <!-- タイトル画像 -->
     <img src="img/titleonly.png" alt="女性専科 さくら整体" class="w-full h-auto old-image-style">
     
+    <!-- 追加テキスト -->
+    <p class="text-center text-xl md:text-2xl text-gray-700 my-6 font-noto-serif">
+        肩・首こり、冷え性、全身疲労でお悩みの貴女に
+    </p>
+
     <!-- キャッチコピー画像 -->
     <img src="img/top.png" alt="毎日がんばるご自分にご褒美のリフレッシュを" class="w-full h-auto rounded-lg shadow-lg my-8">
 
@@ -110,7 +124,7 @@
         </div>
     </div>
     <!-- メニュー -->
-    <ul id="menu" class="flex flex-col md:flex-row justify-center space-y-3 md:space-y-0 md:space-x-6 list-none p-0 mb-10">
+    <ul id="menu" class="flex flex-wrap flex-col md:flex-row justify-center gap-y-3 md:gap-x-6 list-none p-0 mb-10">
         <li>
             <a href="#price" class="block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md md:w-64">
                 メニュー・通常料金のご案内
@@ -138,7 +152,7 @@
     
     <!-- もみほぐし（ボディケア） - 画像付きレイアウト -->
     <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
-        <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:grid md:grid-cols-3 md:gap-6 md:items-center">
             <!-- 画像 -->
             <div class="md:col-span-1 mb-4 md:mb-0">
                 <img src="img/body_2.jpg" alt="もみほぐし施術イメージ" class="rounded-lg shadow-md w-full h-auto object-cover">
@@ -159,10 +173,10 @@
                         </thead>
                         <tbody>
                             <tr class="text-center">
-                                <td class="p-3 text-xl">3,200円</td>
-                                <td class="p-3 text-xl">4,800円</td>
-                                <td class="p-3 text-xl">5,600円</td>
-                                <td class="p-3 text-xl">7,200円</td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">3,200円</span></td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">4,800円</span></td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">5,600円</span></td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">7,200円</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -173,7 +187,7 @@
 
     <!-- オイルトリートメント（足湯含） -->
     <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
-        <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:grid md:grid-cols-3 md:gap-6 md:items-center">
             <!-- 画像 -->
             <div class="md:col-span-1 mb-4 md:mb-0">
                 <img src="img/oil_2.jpg" alt="オイルトリートメント施術イメージ" class="rounded-lg shadow-md w-full h-auto object-cover">
@@ -192,8 +206,8 @@
                         </thead>
                         <tbody>
                             <tr class="text-center">
-                                <td class="p-3 text-xl">6,000円</td>
-                                <td class="p-3 text-xl">7,000円</td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">6,000円</span></td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">7,000円</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -204,7 +218,7 @@
     
     <!-- リフレクソロジー（足底反射区）＋脚部オイルトリートメント（足湯含） -->
     <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
-        <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:grid md:grid-cols-3 md:gap-6 md:items-center">
             <!-- 画像 -->
             <div class="md:col-span-1 mb-4 md:mb-0">
                 <img src="img/leg_3.jpg" alt="リフレクソロジー＋脚部オイルトリートメント施術イメージ" class="rounded-lg shadow-md w-full h-auto object-cover">
@@ -221,7 +235,7 @@
                         </thead>
                         <tbody>
                             <tr class="text-center">
-                                <td class="p-3 text-xl">3,600円</td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">3,600円</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -232,7 +246,7 @@
     
     <!-- リフレクソロジー（足底反射区） -->
     <div class="mb-8 p-4 bg-white rounded-xl shadow-lg">
-        <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:grid md:grid-cols-3 md:gap-6 md:items-center">
             <!-- 画像 -->
             <div class="md:col-span-1 mb-4 md:mb-0">
                 <img src="img/leg_2.jpg" alt="リフレクソロジー施術イメージ" class="rounded-lg shadow-md w-full h-auto object-cover">
@@ -249,7 +263,7 @@
                         </thead>
                         <tbody>
                             <tr class="text-center">
-                                <td class="p-3 text-xl">2,700円</td>
+                                <td class="p-3 text-xl"><span class="highlighter-yellow">2,700円</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -343,9 +357,8 @@
             </div>
             <div class="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
                 <dt class="font-medium text-pink-700">電話</dt>
-                <dd class="mt-1 sm:col-span-2 sm:mt-0 text-gray-800 font-mono text-lg">
-                    <p>0228-24-8166</p>
-                    <p>0120-327-444 <span class="text-sm font-sans">(フリーダイヤル)</span></p>
+                <dd class="mt-1 sm:col-span-2 sm:mt-0 text-gray-800">
+                    <p>090-6683-0223</p>
                 </dd>
             </div>
             <div class="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
