@@ -24,15 +24,21 @@
         .sakura-bg-light {
             background-color: #fce7f3; /* 薄いピンクの背景 */
         }
-        /* ボディに背景画像を設定 */
-        .body-with-background {
+        /* 背景画像用の擬似要素を作成 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
             background-image: url('img/background.jpg'); /* ユーザーがアップロードした画像を使用 */
             background-repeat: no-repeat; /* 画像を繰り返さない */
             background-size: cover; /* 画面全体を覆うように調整 */
             background-position: center center; /* 画像を中央に配置 */
-            background-attachment: fixed; /* 背景画像を固定 */
-            background-color: #f0f0f0; /* 画像がない部分のフォールバックカラー */
         }
+
         .price th {
             @apply bg-pink-100 p-3 text-pink-700 font-semibold border-b-2 border-pink-300 text-lg;
         }
@@ -65,7 +71,7 @@
     </style>
 </head>
 
-<body class="body-with-background pt-20"> <!-- 固定ヘッダー分の余白を追加 -->
+<body class="bg-[#f0f0f0] pt-20"> <!-- 固定ヘッダー分の余白を追加し、背景色を設定 -->
 
 <a id="top"></a>
 
